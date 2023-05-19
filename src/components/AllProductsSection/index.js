@@ -141,7 +141,7 @@ class AllProductsSection extends Component {
       this.getProducts,
     )
   }
-
+//No products view
   renderNoProducts = () => (
     <div className="noProducts">
       <img
