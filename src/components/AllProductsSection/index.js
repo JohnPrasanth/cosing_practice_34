@@ -141,25 +141,12 @@ class AllProductsSection extends Component {
       this.getProducts,
     )
   }
-//No products view
-  renderNoProducts = () => (
-    <div className="noProducts">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png"
-        alt="no products"
-      />
-      <h1>No Products Found</h1>
-      <p>We could not find any products. Try other filters</p>
-    </div>
-  )
 
   renderProductsList = () => {
     const {productsList, activeOptionId} = this.state
+    const shouldShowProductsList = productsList.length > 0
 
-    if (productsList.length === 0) {
-      return this.renderNoProducts()
-    }
-    return (
+    return shouldShowProductsList ? (
       <div className="all-products-container">
         <ProductsHeader
           activeOptionId={activeOptionId}
@@ -172,7 +159,20 @@ class AllProductsSection extends Component {
           ))}
         </ul>
       </div>
+    ) : (
+      <div className="no-products-view">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png"
+          className="no-products-img"
+          alt="no products"
+        />
+        <h1 className="no-products-heading">No Products Found</h1>
+        <p className="no-products-description">
+          We could not find any products. Try other filters.
+        </p>
+      </div>
     )
+
   }
 
   renderLoader = () => (
