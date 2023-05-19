@@ -1,0 +1,67 @@
+.filters-group-container {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-group-container {
+    width: 30%;
+    max-width: 350px;
+    margin-top: 48px;
+    flex-shrink: 0;
+  }
+}
+
+/* Write your CSS here */
+
+.search {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f5f9;
+  width: 380px;
+  outline: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.catItem > button {
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  color: #64748b;
+  cursor: pointer;
+  outline: none;
+}
+.active {
+  color: #0967d2 !important;
+}
+.ratItem {
+  list-style: none;
+}
+.ratItem > button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  gap: 10px;
+  outline: none;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 600;
+}
+.ratItem > button > img {
+  height: 25px;
+}
+
+.clrFilterBtn {
+  background-color: white;
+  border: 2px solid #0967d2;
+  font-weight: 600;
+  color: #0967d2;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.g {
+  color: #64748b;
+}
